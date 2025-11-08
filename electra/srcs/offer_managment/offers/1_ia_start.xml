@@ -1,0 +1,11 @@
+<offer type="ai">
+    <id>1</id>
+    <name>IA-START</name>
+    <cpu>4</cpu>
+    <ram>32</ram>
+    <gpu>
+        <gpu_id>0</gpu_id>
+    </gpu>
+    <vram>64</vram>
+    <storage>300</storage>
+</offer>

@@ -1,0 +1,69 @@
+[4mCAT[24m(1)                                                                             User Commands                                                                             [4mCAT[24m(1)
+
+[1mNAME[0m
+       cat - concatenate files and print on the standard output
+
+[1mSYNOPSIS[0m
+       [1mcat [22m[[4mOPTION[24m]... [[4mFILE[24m]...
+
+[1mDESCRIPTION[0m
+       Concatenate FILE(s) to standard output.
+
+       With no FILE, or when FILE is -, read standard input.
+
+       [1m-A[22m, [1m--show-all[0m
+              equivalent to [1m-vET[0m
+
+       [1m-b[22m, [1m--number-nonblank[0m
+              number nonempty output lines, overrides [1m-n[0m
+
+       [1m-e     [22mequivalent to [1m-vE[0m
+
+       [1m-E[22m, [1m--show-ends[0m
+              display $ at end of each line
+
+       [1m-n[22m, [1m--number[0m
+              number all output lines
+
+       [1m-s[22m, [1m--squeeze-blank[0m
+              suppress repeated empty output lines
+
+       [1m-t     [22mequivalent to [1m-vT[0m
+
+       [1m-T[22m, [1m--show-tabs[0m
+              display TAB characters as ^I
+
+       [1m-u     [22m(ignored)
+
+       [1m-v[22m, [1m--show-nonprinting[0m
+              use ^ and M- notation, except for LFD and TAB
+
+       [1m--help [22mdisplay this help and exit
+
+       [1m--version[0m
+              output version information and exit
+
+[1mEXAMPLES[0m
+       cat f - g
+              Output f's contents, then standard input, then g's contents.
+
+       cat    Copy standard input to standard output.
+
+[1mAUTHOR[0m
+       Written by Torbjorn Granlund and Richard M. Stallman.
+
+[1mREPORTING BUGS[0m
+       GNU coreutils online help: <https://www.gnu.org/software/coreutils/>
+       Report any translation bugs to <https://translationproject.org/team/>
+
+[1mCOPYRIGHT[0m
+       Copyright © 2023 Free Software Foundation, Inc.  License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
+       This is free software: you are free to change and redistribute it.  There is NO WARRANTY, to the extent permitted by law.
+
+[1mSEE ALSO[0m
+       [1mtac[22m(1)
+
+       Full documentation <https://www.gnu.org/software/coreutils/cat>
+       or available locally via: info '(coreutils) cat invocation'
+
+GNU coreutils 9.4                                                                    June 2025                                                                               [4mCAT[24m(1)

@@ -1,0 +1,12 @@
+<offer type="ai">
+    <id>3</id>
+    <name>IA-PRO</name>
+    <cpu>12</cpu>
+    <ram>64</ram>
+    <gpu>
+        <gpu_id>0</gpu_id>
+        <gpu_id>1</gpu_id>
+    </gpu>
+    <vram>80</vram>
+    <storage>2000</storage>
+</offer>

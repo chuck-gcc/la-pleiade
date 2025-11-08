@@ -1,0 +1,12 @@
+<offer type="ai">
+    <id>4</id>
+    <name>IA-LAB</name>
+    <cpu>16</cpu>
+    <ram>64</ram>
+    <gpu>
+        <gpu_id>0</gpu_id>
+        <gpu_id>1</gpu_id>
+    </gpu>
+    <vram>64</vram>
+    <storage>3000</storage>
+</offer>

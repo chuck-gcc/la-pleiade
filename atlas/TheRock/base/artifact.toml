@@ -1,0 +1,75 @@
+# half
+[components.dev."base/half/stage"]
+[components.doc."base/half/stage"]
+
+# amdsmi
+[components.dbg."base/amdsmi/stage"]
+optional = "windows"
+[components.dev."base/amdsmi/stage"]
+optional = "windows"
+[components.doc."base/amdsmi/stage"]
+optional = "windows"
+[components.lib."base/amdsmi/stage"]
+optional = "windows"
+[components.run."base/amdsmi/stage"]
+optional = "windows"
+include = [
+  "bin/**",
+  "libexec/**",
+  "share/amd_smi/**",
+]
+
+# rocm_smi_lib
+[components.dbg."base/rocm_smi_lib/stage"]
+optional = "windows"
+[components.dev."base/rocm_smi_lib/stage"]
+optional = "windows"
+[components.doc."base/rocm_smi_lib/stage"]
+optional = "windows"
+[components.lib."base/rocm_smi_lib/stage"]
+optional = "windows"
+[components.run."base/rocm_smi_lib/stage"]
+optional = "windows"
+include = [
+  "bin/**",
+  "libexec/**",
+]
+
+# rocm-cmake
+[components.dev."base/rocm-cmake/stage"]
+[components.doc."base/rocm-cmake/stage"]
+
+# rocm-core
+[components.dev."base/rocm-core/stage"]
+include = "lib/rocmmod"
+[components.doc."base/rocm-core/stage"]
+[components.lib."base/rocm-core/stage"]
+include = [
+  ".info/**",
+]
+[components.run."base/rocm-core/stage"]
+include = "libexec/**"
+
+# rocprofiler-register
+[components.dbg."base/rocprofiler-register/stage"]
+optional = "windows"
+[components.dev."base/rocprofiler-register/stage"]
+optional = "windows"
+[components.doc."base/rocprofiler-register/stage"]
+optional = "windows"
+[components.lib."base/rocprofiler-register/stage"]
+optional = "windows"
+[components.run."base/rocprofiler-register/stage"]
+optional = "windows"
+[components.test."base/rocprofiler-register/stage"]
+optional = "windows"
+include = [
+  "share/rocprofiler-register/tests/**",
+]
+
+# therock-aux-overlay
+[components.lib."base/aux-overlay/stage"]
+default_patterns = false
+include = [
+  "**/*",
+]

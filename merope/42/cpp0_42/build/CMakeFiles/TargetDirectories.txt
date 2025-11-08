@@ -1,0 +1,4 @@
+/home/cc/gpu_lab/pleiades/merope/42/cpp0_42/build/CMakeFiles/megaphone.dir
+/home/cc/gpu_lab/pleiades/merope/42/cpp0_42/build/CMakeFiles/phone.dir
+/home/cc/gpu_lab/pleiades/merope/42/cpp0_42/build/CMakeFiles/edit_cache.dir
+/home/cc/gpu_lab/pleiades/merope/42/cpp0_42/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,56 @@
+# 🧱 Build / ROCm
+atlas/build/
+atlas/rockenv/
+atlas/TheRock/build/
+atlas/TheRock/.venv/
+atlas/.ccache/
+atlas/.cmake/
+atlas/CMakeCache.txt
+atlas/TheRock/compiler/
+# merope
+
+merope/venv/
+
+# 🧠 Python
+venv/
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+*.egg-info/
+.eggs/
+*.log
+
+# 🪨 TheRock et ROCm logs
+*.prof
+*.json
+*.yaml
+rocblas.log
+*.hiptrace
+
+# 🔥 Poids de modèles
+*.pt
+*.pth
+*.bin
+*.safetensors
+
+# 🧰 IDE / outils
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 🐳 Docker
+docker/tmp/
+*.tar
+
+# ⚙️ Systèmes
+.DS_Store
+Thumbs.db
+*.bak
+*.tmp
+
+# ✅ Fichiers spécifiques autorisés
+!merope/scripts/
+!docs/
+.gitigniore
