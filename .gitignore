@@ -7,6 +7,11 @@ atlas/.ccache/
 atlas/.cmake/
 atlas/CMakeCache.txt
 atlas/TheRock/compiler/
+
+# electra
+
+electra/*.iso
+
 # merope
 
 merope/venv/

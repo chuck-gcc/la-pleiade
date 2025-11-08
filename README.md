@@ -1,6 +1,6 @@
 #PLEIADES
 
-la pleiades est un environement de travail orienté autour de la founiture d'infrastrucure gpu.
+Pleiades est un environnement de travail dédié à la fourniture d’infrastructures GPU.
 
 # atlas
 
