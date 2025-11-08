@@ -1,0 +1,3 @@
+/home/cc/gpu_lab/pleiades/electra/build/CMakeFiles/electra.dir
+/home/cc/gpu_lab/pleiades/electra/build/CMakeFiles/edit_cache.dir
+/home/cc/gpu_lab/pleiades/electra/build/CMakeFiles/rebuild_cache.dir

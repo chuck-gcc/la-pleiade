@@ -30,10 +30,15 @@ typedef struct s_offre
     unsigned int        gpu[GPU_MAX];
     unsigned int        vram;
     unsigned long       storage;
+    char                *xml_path;
     struct s_offre      *next;
     
 } t_offre;
 
 t_offre **get_offer_list(void);
+
+void dislay_offer(t_offre **offre_list);
+int clean_list_offer(t_offre **offres);
+
 
 #endif

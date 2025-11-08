@@ -4,8 +4,10 @@
     <cpu>16</cpu>
     <ram>64</ram>
     <gpu>
-        <gpu_id>0</gpu_id>
         <gpu_id>1</gpu_id>
+        <gpu_id>2</gpu_id>
+        <gpu_id>0</gpu_id>
+        <gpu_id>0</gpu_id>
     </gpu>
     <vram>64</vram>
     <storage>3000</storage>

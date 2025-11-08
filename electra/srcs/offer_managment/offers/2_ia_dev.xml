@@ -4,6 +4,8 @@
     <cpu>8</cpu>
     <ram>64</ram>
     <gpu>
+        <gpu_id>1</gpu_id>
+        <gpu_id>1</gpu_id>
         <gpu_id>0</gpu_id>
         <gpu_id>0</gpu_id>
     </gpu>

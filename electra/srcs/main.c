@@ -1,10 +1,14 @@
 #include "vm_managment/vm.h"
 #include "offer_managment/offer.h"
-#include <libxml/parser.h>
 
 int main(void)
 {
-    get_offer_list();
+    t_offre **list;
+
+    list =  get_offer_list();
+    dislay_offer(list);
+    clean_list_offer(list);
+    free(list);
     // virConnectPtr co;
 
     // co = host_connection();
