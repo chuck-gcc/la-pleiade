@@ -1,8 +1,8 @@
 <offer type="ai">
     <id>5</id>
     <name>IA-MAX</name>
-    <cpu>16</cpu>
-    <ram>64</ram>
+    <cpu>24</cpu>
+    <ram>256</ram>
     <gpu>
         <gpu_id>1</gpu_id>
         <gpu_id>1</gpu_id>

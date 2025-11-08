@@ -92,7 +92,7 @@ static t_offre *create_offer_node(struct dirent *dir_node)
         return(NULL);
     }
     printf("New XML START creation structure %s\n", dir_node->d_name);
-
+    memset(node->gpu,0,sizeof(int) * GPU_MAX);
     get_config_data(node, root, 0);
     xmlFreeDoc(doc);
     
@@ -128,24 +128,28 @@ static void offer_add_back(t_offre **offers_list, t_offre *offer)
 
 }
 
-void dislay_offer(t_offre **offre_list)
+void dislay_offer_list(t_offre **offre_list)
 {
     t_offre *ptr;
 
     if(!offre_list)
         return;
     ptr = *offre_list;
+    printf("%s\n", "────────────────── DISPLAY OFFER LIST ────────────────────");
+    printf("%s\n", "──────────────────────────────────────────────────────────");
     while(ptr)
     {
-        printf("[ ID ] %20d\n", ptr->id);
-        printf("[NAME] %20s\n", ptr->name);
-        printf("[ CPU ] %20d\n", ptr->cpu);
-        printf("[ RAM ] %20ld\n", ptr->ram);
-        printf("[ GPU ] %d %d %d %d\n", ptr->gpu[0], ptr->gpu[1],ptr->gpu[2],ptr->gpu[3]);
-        printf("[ VRAM ] %d\n", ptr->vram);
-        printf("[ STORAGE ] %ld\n", ptr->storage);
-        printf("[XML_PATH] %20s\n", ptr->xml_path);
-        printf("\n");
+        printf("│ %-12s │ %-40d │\n", "ID", ptr->id);
+        printf("%s\n", "──────────────────────────────────────────────────────────");
+        printf("│ %-12s │ %-40s │\n", "NAME", ptr->name);
+        printf("│ %-12s │ %-40d │\n", "CPU", ptr->cpu);
+        printf("│ %-12s │ %-40ld │\n", "RAM", ptr->ram);
+        printf("│ %-12s │ %d %d %d %d %34s\n", "GPU", ptr->gpu[0], ptr->gpu[1], ptr->gpu[2], ptr->gpu[3], "|");
+        printf("│ %-12s │ %-40d │\n", "VRAM", ptr->vram);
+        printf("│ %-12s │ %-40ld │\n", "STORAGE", ptr->storage);
+        printf("│ %-12s │ %-40s │\n", "XML_PATH", ptr->xml_path);
+        printf("%s\n", "──────────────────────────────────────────────────────────");
+
         ptr = ptr->next;
     }
     printf("\n");

@@ -37,7 +37,7 @@ typedef struct s_offre
 
 t_offre **get_offer_list(void);
 
-void dislay_offer(t_offre **offre_list);
+void dislay_offer_list(t_offre **offre_list);
 int clean_list_offer(t_offre **offres);
 
 
