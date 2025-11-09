@@ -1,5 +1,7 @@
 #include "vm.h"
 
+// put the xml file in string
+
 char *get_xml(const char *path)
 {
     FILE *f;

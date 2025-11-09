@@ -119,5 +119,4 @@ CMakeFiles/electra.dir/srcs/main.c.o: \
  /usr/include/libxml/xmlautomata.h /usr/include/libxml/entities.h \
  /usr/include/libxml/encoding.h /usr/include/libxml/xmlIO.h \
  /usr/include/libxml/SAX2.h /usr/include/libxml/threads.h \
- /home/cc/gpu_lab/pleiades/electra/srcs/offer_managment/scheduler.h \
  /home/cc/gpu_lab/pleiades/electra/srcs/offer_managment/../../../merope/42/libft/libft.h

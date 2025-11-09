@@ -97,10 +97,24 @@ CMakeFiles/electra.dir/srcs/offer_managment/offer.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/electra.dir/srcs/offer_managment/offer.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cc/gpu_lab/pleiades/electra/srcs/offer_managment/offer.c -o CMakeFiles/electra.dir/srcs/offer_managment/offer.c.s
 
+CMakeFiles/electra.dir/srcs/offer_managment/scheduler.c.o: CMakeFiles/electra.dir/flags.make
+CMakeFiles/electra.dir/srcs/offer_managment/scheduler.c.o: /home/cc/gpu_lab/pleiades/electra/srcs/offer_managment/scheduler.c
+CMakeFiles/electra.dir/srcs/offer_managment/scheduler.c.o: CMakeFiles/electra.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cc/gpu_lab/pleiades/electra/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/electra.dir/srcs/offer_managment/scheduler.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/electra.dir/srcs/offer_managment/scheduler.c.o -MF CMakeFiles/electra.dir/srcs/offer_managment/scheduler.c.o.d -o CMakeFiles/electra.dir/srcs/offer_managment/scheduler.c.o -c /home/cc/gpu_lab/pleiades/electra/srcs/offer_managment/scheduler.c
+
+CMakeFiles/electra.dir/srcs/offer_managment/scheduler.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/electra.dir/srcs/offer_managment/scheduler.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/cc/gpu_lab/pleiades/electra/srcs/offer_managment/scheduler.c > CMakeFiles/electra.dir/srcs/offer_managment/scheduler.c.i
+
+CMakeFiles/electra.dir/srcs/offer_managment/scheduler.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/electra.dir/srcs/offer_managment/scheduler.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cc/gpu_lab/pleiades/electra/srcs/offer_managment/scheduler.c -o CMakeFiles/electra.dir/srcs/offer_managment/scheduler.c.s
+
 CMakeFiles/electra.dir/srcs/vm_managment/vm_domain.c.o: CMakeFiles/electra.dir/flags.make
 CMakeFiles/electra.dir/srcs/vm_managment/vm_domain.c.o: /home/cc/gpu_lab/pleiades/electra/srcs/vm_managment/vm_domain.c
 CMakeFiles/electra.dir/srcs/vm_managment/vm_domain.c.o: CMakeFiles/electra.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cc/gpu_lab/pleiades/electra/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/electra.dir/srcs/vm_managment/vm_domain.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cc/gpu_lab/pleiades/electra/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/electra.dir/srcs/vm_managment/vm_domain.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/electra.dir/srcs/vm_managment/vm_domain.c.o -MF CMakeFiles/electra.dir/srcs/vm_managment/vm_domain.c.o.d -o CMakeFiles/electra.dir/srcs/vm_managment/vm_domain.c.o -c /home/cc/gpu_lab/pleiades/electra/srcs/vm_managment/vm_domain.c
 
 CMakeFiles/electra.dir/srcs/vm_managment/vm_domain.c.i: cmake_force
@@ -114,7 +128,7 @@ CMakeFiles/electra.dir/srcs/vm_managment/vm_domain.c.s: cmake_force
 CMakeFiles/electra.dir/srcs/vm_managment/vm_host.c.o: CMakeFiles/electra.dir/flags.make
 CMakeFiles/electra.dir/srcs/vm_managment/vm_host.c.o: /home/cc/gpu_lab/pleiades/electra/srcs/vm_managment/vm_host.c
 CMakeFiles/electra.dir/srcs/vm_managment/vm_host.c.o: CMakeFiles/electra.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cc/gpu_lab/pleiades/electra/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/electra.dir/srcs/vm_managment/vm_host.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cc/gpu_lab/pleiades/electra/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/electra.dir/srcs/vm_managment/vm_host.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/electra.dir/srcs/vm_managment/vm_host.c.o -MF CMakeFiles/electra.dir/srcs/vm_managment/vm_host.c.o.d -o CMakeFiles/electra.dir/srcs/vm_managment/vm_host.c.o -c /home/cc/gpu_lab/pleiades/electra/srcs/vm_managment/vm_host.c
 
 CMakeFiles/electra.dir/srcs/vm_managment/vm_host.c.i: cmake_force
@@ -128,7 +142,7 @@ CMakeFiles/electra.dir/srcs/vm_managment/vm_host.c.s: cmake_force
 CMakeFiles/electra.dir/srcs/vm_managment/vm_xml.c.o: CMakeFiles/electra.dir/flags.make
 CMakeFiles/electra.dir/srcs/vm_managment/vm_xml.c.o: /home/cc/gpu_lab/pleiades/electra/srcs/vm_managment/vm_xml.c
 CMakeFiles/electra.dir/srcs/vm_managment/vm_xml.c.o: CMakeFiles/electra.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cc/gpu_lab/pleiades/electra/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/electra.dir/srcs/vm_managment/vm_xml.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/cc/gpu_lab/pleiades/electra/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/electra.dir/srcs/vm_managment/vm_xml.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/electra.dir/srcs/vm_managment/vm_xml.c.o -MF CMakeFiles/electra.dir/srcs/vm_managment/vm_xml.c.o.d -o CMakeFiles/electra.dir/srcs/vm_managment/vm_xml.c.o -c /home/cc/gpu_lab/pleiades/electra/srcs/vm_managment/vm_xml.c
 
 CMakeFiles/electra.dir/srcs/vm_managment/vm_xml.c.i: cmake_force
@@ -143,6 +157,7 @@ CMakeFiles/electra.dir/srcs/vm_managment/vm_xml.c.s: cmake_force
 electra_OBJECTS = \
 "CMakeFiles/electra.dir/srcs/main.c.o" \
 "CMakeFiles/electra.dir/srcs/offer_managment/offer.c.o" \
+"CMakeFiles/electra.dir/srcs/offer_managment/scheduler.c.o" \
 "CMakeFiles/electra.dir/srcs/vm_managment/vm_domain.c.o" \
 "CMakeFiles/electra.dir/srcs/vm_managment/vm_host.c.o" \
 "CMakeFiles/electra.dir/srcs/vm_managment/vm_xml.c.o"
@@ -152,6 +167,7 @@ electra_EXTERNAL_OBJECTS =
 
 electra: CMakeFiles/electra.dir/srcs/main.c.o
 electra: CMakeFiles/electra.dir/srcs/offer_managment/offer.c.o
+electra: CMakeFiles/electra.dir/srcs/offer_managment/scheduler.c.o
 electra: CMakeFiles/electra.dir/srcs/vm_managment/vm_domain.c.o
 electra: CMakeFiles/electra.dir/srcs/vm_managment/vm_host.c.o
 electra: CMakeFiles/electra.dir/srcs/vm_managment/vm_xml.c.o
@@ -160,7 +176,7 @@ electra: /usr/lib/x86_64-linux-gnu/libvirt.so
 electra: /usr/lib/x86_64-linux-gnu/libxml2.so.2
 electra: /home/cc/gpu_lab/pleiades/merope/42/libft/libft.a
 electra: CMakeFiles/electra.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/cc/gpu_lab/pleiades/electra/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable electra"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/cc/gpu_lab/pleiades/electra/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable electra"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/electra.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

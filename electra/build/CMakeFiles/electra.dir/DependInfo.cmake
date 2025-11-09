@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/cc/gpu_lab/pleiades/electra/srcs/main.c" "CMakeFiles/electra.dir/srcs/main.c.o" "gcc" "CMakeFiles/electra.dir/srcs/main.c.o.d"
   "/home/cc/gpu_lab/pleiades/electra/srcs/offer_managment/offer.c" "CMakeFiles/electra.dir/srcs/offer_managment/offer.c.o" "gcc" "CMakeFiles/electra.dir/srcs/offer_managment/offer.c.o.d"
+  "/home/cc/gpu_lab/pleiades/electra/srcs/offer_managment/scheduler.c" "CMakeFiles/electra.dir/srcs/offer_managment/scheduler.c.o" "gcc" "CMakeFiles/electra.dir/srcs/offer_managment/scheduler.c.o.d"
   "/home/cc/gpu_lab/pleiades/electra/srcs/vm_managment/vm_domain.c" "CMakeFiles/electra.dir/srcs/vm_managment/vm_domain.c.o" "gcc" "CMakeFiles/electra.dir/srcs/vm_managment/vm_domain.c.o.d"
   "/home/cc/gpu_lab/pleiades/electra/srcs/vm_managment/vm_host.c" "CMakeFiles/electra.dir/srcs/vm_managment/vm_host.c.o" "gcc" "CMakeFiles/electra.dir/srcs/vm_managment/vm_host.c.o.d"
   "/home/cc/gpu_lab/pleiades/electra/srcs/vm_managment/vm_xml.c" "CMakeFiles/electra.dir/srcs/vm_managment/vm_xml.c.o" "gcc" "CMakeFiles/electra.dir/srcs/vm_managment/vm_xml.c.o.d"

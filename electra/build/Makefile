@@ -177,6 +177,30 @@ srcs/offer_managment/offer.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/electra.dir/build.make CMakeFiles/electra.dir/srcs/offer_managment/offer.c.s
 .PHONY : srcs/offer_managment/offer.c.s
 
+srcs/offer_managment/scheduler.o: srcs/offer_managment/scheduler.c.o
+.PHONY : srcs/offer_managment/scheduler.o
+
+# target to build an object file
+srcs/offer_managment/scheduler.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/electra.dir/build.make CMakeFiles/electra.dir/srcs/offer_managment/scheduler.c.o
+.PHONY : srcs/offer_managment/scheduler.c.o
+
+srcs/offer_managment/scheduler.i: srcs/offer_managment/scheduler.c.i
+.PHONY : srcs/offer_managment/scheduler.i
+
+# target to preprocess a source file
+srcs/offer_managment/scheduler.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/electra.dir/build.make CMakeFiles/electra.dir/srcs/offer_managment/scheduler.c.i
+.PHONY : srcs/offer_managment/scheduler.c.i
+
+srcs/offer_managment/scheduler.s: srcs/offer_managment/scheduler.c.s
+.PHONY : srcs/offer_managment/scheduler.s
+
+# target to generate assembly for a file
+srcs/offer_managment/scheduler.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/electra.dir/build.make CMakeFiles/electra.dir/srcs/offer_managment/scheduler.c.s
+.PHONY : srcs/offer_managment/scheduler.c.s
+
 srcs/vm_managment/vm_domain.o: srcs/vm_managment/vm_domain.c.o
 .PHONY : srcs/vm_managment/vm_domain.o
 
@@ -264,6 +288,9 @@ help:
 	@echo "... srcs/offer_managment/offer.o"
 	@echo "... srcs/offer_managment/offer.i"
 	@echo "... srcs/offer_managment/offer.s"
+	@echo "... srcs/offer_managment/scheduler.o"
+	@echo "... srcs/offer_managment/scheduler.i"
+	@echo "... srcs/offer_managment/scheduler.s"
 	@echo "... srcs/vm_managment/vm_domain.o"
 	@echo "... srcs/vm_managment/vm_domain.i"
 	@echo "... srcs/vm_managment/vm_domain.s"

@@ -1,5 +1,5 @@
-CMakeFiles/electra.dir/srcs/offer_managment/offer.c.o: \
- /home/cc/gpu_lab/pleiades/electra/srcs/offer_managment/offer.c \
+CMakeFiles/electra.dir/srcs/offer_managment/scheduler.c.o: \
+ /home/cc/gpu_lab/pleiades/electra/srcs/offer_managment/scheduler.c \
  /usr/include/stdc-predef.h \
  /home/cc/gpu_lab/pleiades/electra/srcs/offer_managment/offer.h \
  /usr/include/stdlib.h \

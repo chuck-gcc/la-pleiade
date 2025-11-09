@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/electra.dir/srcs/main.c.o.d"
   "CMakeFiles/electra.dir/srcs/offer_managment/offer.c.o"
   "CMakeFiles/electra.dir/srcs/offer_managment/offer.c.o.d"
+  "CMakeFiles/electra.dir/srcs/offer_managment/scheduler.c.o"
+  "CMakeFiles/electra.dir/srcs/offer_managment/scheduler.c.o.d"
   "CMakeFiles/electra.dir/srcs/vm_managment/vm_domain.c.o"
   "CMakeFiles/electra.dir/srcs/vm_managment/vm_domain.c.o.d"
   "CMakeFiles/electra.dir/srcs/vm_managment/vm_host.c.o"

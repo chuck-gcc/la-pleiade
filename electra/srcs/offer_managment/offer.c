@@ -101,7 +101,6 @@ static t_offre *create_offer_node(struct dirent *dir_node)
 
     node->name = ft_strdup(dir_node->d_name);
     node->resa_count = 0;
-    node->resa_tab = NULL;
     node->next = NULL;
     return(node);
 }
@@ -127,7 +126,6 @@ static void offer_add_back(t_offre **offers_list, t_offre *offer)
     }
     if(ptr->id > offer->id)
     {
-        
         precedent->next = offer;
         offer->next = ptr;
     }
@@ -155,7 +153,6 @@ void dislay_offer_list(t_offre **offre_list)
         printf("│ %-12s │ %-40d │\n", "VRAM", ptr->vram);
         printf("│ %-12s │ %-40ld │\n", "STORAGE", ptr->storage);
         printf("│ %-12s │ %-40d │\n", "RESA COUNT", ptr->resa_count);
-        printf("│ %-12s │ %-40p │\n", "RESA TAB", ptr->resa_tab);
         printf("│ %-12s │ %-40s │\n", "XML_PATH", ptr->xml_path);
         printf("%s\n", "──────────────────────────────────────────────────────────");
 
@@ -214,8 +211,6 @@ t_offre **get_offer_list(void)
             clean_list_offer(offers_list);
             return(NULL);
         }
-        printf("Node add back %d\n", offer->id);
-
         offer_add_back(offers_list, offer);
     }
     printf("\n");
