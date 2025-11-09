@@ -9,6 +9,6 @@
         <gpu_id>0</gpu_id>
         <gpu_id>0</gpu_id>
     </gpu>
-    
+    <vram>64</vram>
     <storage>1000</storage>
 </offer>

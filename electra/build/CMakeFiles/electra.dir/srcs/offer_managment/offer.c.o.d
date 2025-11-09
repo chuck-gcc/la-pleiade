@@ -102,7 +102,10 @@ CMakeFiles/electra.dir/srcs/offer_managment/offer.c.o: \
  /usr/include/linux/limits.h \
  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min.h \
- /usr/include/x86_64-linux-gnu/bits/dirent_ext.h \
+ /usr/include/x86_64-linux-gnu/bits/dirent_ext.h /usr/include/time.h \
+ /usr/include/x86_64-linux-gnu/bits/time.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
  /usr/include/libxml/parser.h /usr/include/libxml/xmlversion.h \
  /usr/include/libxml/xmlexports.h /usr/include/libxml/tree.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h \
@@ -115,4 +118,5 @@ CMakeFiles/electra.dir/srcs/offer_managment/offer.c.o: \
  /usr/include/libxml/xmlautomata.h /usr/include/libxml/entities.h \
  /usr/include/libxml/encoding.h /usr/include/libxml/xmlIO.h \
  /usr/include/libxml/SAX2.h /usr/include/libxml/threads.h \
+ /home/cc/gpu_lab/pleiades/electra/srcs/offer_managment/scheduler.h \
  /home/cc/gpu_lab/pleiades/electra/srcs/offer_managment/../../../merope/42/libft/libft.h

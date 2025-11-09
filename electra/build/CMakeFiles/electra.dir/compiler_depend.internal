@@ -5,6 +5,7 @@ CMakeFiles/electra.dir/srcs/main.c.o
  /home/cc/gpu_lab/pleiades/electra/srcs/main.c
  /home/cc/gpu_lab/pleiades/merope/42/libft/libft.h
  /home/cc/gpu_lab/pleiades/electra/srcs/offer_managment/offer.h
+ /home/cc/gpu_lab/pleiades/electra/srcs/offer_managment/scheduler.h
  /home/cc/gpu_lab/pleiades/electra/srcs/vm_managment/vm.h
  /usr/include/alloca.h
  /usr/include/asm-generic/bitsperlong.h
@@ -62,6 +63,7 @@ CMakeFiles/electra.dir/srcs/main.c.o
  /usr/include/stdlib.h
  /usr/include/string.h
  /usr/include/strings.h
+ /usr/include/time.h
  /usr/include/unistd.h
  /usr/include/x86_64-linux-gnu/asm/bitsperlong.h
  /usr/include/x86_64-linux-gnu/asm/errno.h
@@ -106,6 +108,7 @@ CMakeFiles/electra.dir/srcs/main.c.o
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h
  /usr/include/x86_64-linux-gnu/bits/struct_stat.h
  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h
+ /usr/include/x86_64-linux-gnu/bits/time.h
  /usr/include/x86_64-linux-gnu/bits/time64.h
  /usr/include/x86_64-linux-gnu/bits/timesize.h
  /usr/include/x86_64-linux-gnu/bits/types.h
@@ -123,9 +126,11 @@ CMakeFiles/electra.dir/srcs/main.c.o
  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h
+ /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h
+ /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h
  /usr/include/x86_64-linux-gnu/bits/types/time_t.h
  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h
  /usr/include/x86_64-linux-gnu/bits/typesizes.h
@@ -149,6 +154,7 @@ CMakeFiles/electra.dir/srcs/offer_managment/offer.c.o
  /home/cc/gpu_lab/pleiades/electra/srcs/offer_managment/offer.c
  /home/cc/gpu_lab/pleiades/merope/42/libft/libft.h
  /home/cc/gpu_lab/pleiades/electra/srcs/offer_managment/offer.h
+ /home/cc/gpu_lab/pleiades/electra/srcs/offer_managment/scheduler.h
  /usr/include/alloca.h
  /usr/include/asm-generic/bitsperlong.h
  /usr/include/asm-generic/errno-base.h
@@ -205,6 +211,7 @@ CMakeFiles/electra.dir/srcs/offer_managment/offer.c.o
  /usr/include/stdlib.h
  /usr/include/string.h
  /usr/include/strings.h
+ /usr/include/time.h
  /usr/include/unistd.h
  /usr/include/x86_64-linux-gnu/asm/bitsperlong.h
  /usr/include/x86_64-linux-gnu/asm/errno.h
@@ -249,6 +256,7 @@ CMakeFiles/electra.dir/srcs/offer_managment/offer.c.o
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h
  /usr/include/x86_64-linux-gnu/bits/struct_stat.h
  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h
+ /usr/include/x86_64-linux-gnu/bits/time.h
  /usr/include/x86_64-linux-gnu/bits/time64.h
  /usr/include/x86_64-linux-gnu/bits/timesize.h
  /usr/include/x86_64-linux-gnu/bits/types.h
@@ -266,9 +274,11 @@ CMakeFiles/electra.dir/srcs/offer_managment/offer.c.o
  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h
+ /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h
  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h
+ /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h
  /usr/include/x86_64-linux-gnu/bits/types/time_t.h
  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h
  /usr/include/x86_64-linux-gnu/bits/typesizes.h

@@ -13,13 +13,16 @@
 #include <fcntl.h>
 #include <string.h>
  #include <dirent.h>
+ #include <time.h>
 #include <sys/types.h>
 #include <libxml/parser.h>
+#include "scheduler.h"
 #include "../../../merope/42/libft/libft.h"
 
 #define GPU_MAX 4
 #define OFFERS_DIR_OPEN "srcs/offer_managment/offers"
 #define OFFERS_DIR_PATH "srcs/offer_managment/offers/"
+
 
 typedef struct s_offre
 {
@@ -31,6 +34,8 @@ typedef struct s_offre
     unsigned int        vram;
     unsigned long       storage;
     char                *xml_path;
+    unsigned int        resa_count;
+    t_resa_date         **resa_tab;
     struct s_offre      *next;
     
 } t_offre;

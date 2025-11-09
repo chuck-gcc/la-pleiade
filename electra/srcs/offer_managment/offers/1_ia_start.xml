@@ -2,7 +2,7 @@
     <id>1</id>
     <name>IA-START</name>
     <cpu>4</cpu>
-    <ram>3209990098</ram>
+    <ram>32</ram>
     <gpu>
         <gpu_id>1</gpu_id>
         <gpu_id>0</gpu_id>

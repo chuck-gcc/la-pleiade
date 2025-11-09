@@ -6,7 +6,17 @@ int main(void)
     t_offre **list;
 
     list =  get_offer_list();
+    
+    
+    
+
+
+   
     dislay_offer_list(list);
+
+
+
+
     clean_list_offer(list);
     free(list);
     // virConnectPtr co;

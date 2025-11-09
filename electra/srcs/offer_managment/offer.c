@@ -31,7 +31,7 @@ static void get_config_data(t_offre *node, xmlNodePtr root, int i)
         {
             
             len = ft_strlen(n->name);
-            printf("%s ", n->name);
+            //printf("%s ", n->name);
             // xmlNodeGetContent need to be free?
             if(!strncmp(n->name, "gpu_id", ft_strlen("gpu_id")))
             {
@@ -91,7 +91,7 @@ static t_offre *create_offer_node(struct dirent *dir_node)
         xmlFreeDoc(doc);
         return(NULL);
     }
-    printf("New XML START creation structure %s\n", dir_node->d_name);
+    //printf("New XML START creation structure %s\n", dir_node->d_name);
     memset(node->gpu,0,sizeof(int) * GPU_MAX);
     get_config_data(node, root, 0);
     xmlFreeDoc(doc);
@@ -100,18 +100,21 @@ static t_offre *create_offer_node(struct dirent *dir_node)
     free(offer_path);
 
     node->name = ft_strdup(dir_node->d_name);
+    node->resa_count = 0;
+    node->resa_tab = NULL;
     node->next = NULL;
     return(node);
 }
 
 static void offer_add_back(t_offre **offers_list, t_offre *offer)
 {
+    
     t_offre *ptr;
-    printf("Node add back\n");
+    t_offre *precedent;
 
     if(!offers_list || !offer)
         return;
-    if(!*offers_list)
+    if(!(*offers_list))
     {
         *offers_list = offer;
         return;
@@ -119,13 +122,17 @@ static void offer_add_back(t_offre **offers_list, t_offre *offer)
     ptr = *offers_list;
     while (ptr->next)
     {
-
-        if(ptr->id < offer->id)
-            printf("here %d and %d\n", ptr->id, offer->id);
+        precedent  = ptr;
         ptr = ptr->next;
     }
-    ptr->next = offer;    
-
+    if(ptr->id > offer->id)
+    {
+        
+        precedent->next = offer;
+        offer->next = ptr;
+    }
+    else
+        ptr->next = offer;
 }
 
 void dislay_offer_list(t_offre **offre_list)
@@ -147,6 +154,8 @@ void dislay_offer_list(t_offre **offre_list)
         printf("│ %-12s │ %d %d %d %d %34s\n", "GPU", ptr->gpu[0], ptr->gpu[1], ptr->gpu[2], ptr->gpu[3], "|");
         printf("│ %-12s │ %-40d │\n", "VRAM", ptr->vram);
         printf("│ %-12s │ %-40ld │\n", "STORAGE", ptr->storage);
+        printf("│ %-12s │ %-40d │\n", "RESA COUNT", ptr->resa_count);
+        printf("│ %-12s │ %-40p │\n", "RESA TAB", ptr->resa_tab);
         printf("│ %-12s │ %-40s │\n", "XML_PATH", ptr->xml_path);
         printf("%s\n", "──────────────────────────────────────────────────────────");
 
@@ -205,6 +214,8 @@ t_offre **get_offer_list(void)
             clean_list_offer(offers_list);
             return(NULL);
         }
+        printf("Node add back %d\n", offer->id);
+
         offer_add_back(offers_list, offer);
     }
     printf("\n");
