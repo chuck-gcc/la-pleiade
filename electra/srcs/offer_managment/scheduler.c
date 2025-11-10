@@ -1,6 +1,24 @@
 #include "offer.h"
 
+#define HourToMs(hour) (hour * (60 * (60 * 1000)))
 
+
+void add_resa_node(t_resa *tree, t_resa *node)
+{
+
+    if(!tree)
+        return;
+
+    if(tree->left != NULL && tree->right != NULL)
+    {
+        node->left = tree;
+        return;
+    }
+    add_resa_node(tree->left, node);
+    add_resa_node(tree->right, node);
+
+
+}
 
 void binary_resa_tree(t_resa *tree)
 {
@@ -51,11 +69,23 @@ int test_time(t_offre **list)
     resa_tree = NULL;
 
     t_resa *resa;
+    t_resa *resa1;
+    t_resa *resa2;
+    t_resa *resa3;
+    t_resa *resa4;
     
     resa = ask_a_resa(*list, start, start + 1);
+    resa1 = ask_a_resa((*list)->next, start + 1000, start + 2000);
+    resa2 = ask_a_resa((*list)->next->next, start + 4000, start + 6000);
+    resa3 = ask_a_resa((*list)->next->next->next, start + 4000, start + 6000);
+    resa4 = ask_a_resa((*list)->next, start + 6000, start + 6000);
 
-
-
+    resa->left = resa1;
+    resa->right = resa2;
 
     binary_resa_tree(resa);
+    printf("new start\n");
+    resa3->left = resa;
+    resa3->right = resa4;
+    binary_resa_tree(resa3);
 }
