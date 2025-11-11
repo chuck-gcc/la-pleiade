@@ -102,4 +102,20 @@ char 	*ft_skip_space_and_quote(char *str);
 int		ft_isquote(char c);
 int 	ft_nbr_of_word(const char *str);
 
+
+typedef struct s_date
+{
+	unsigned int day;
+	unsigned int mount;
+	unsigned int year;
+	unsigned int hour;
+	unsigned int min;
+	unsigned int sec;
+
+} t_date;
+
+
+unsigned int day_in_mount(t_date date);
+
+
 #endif

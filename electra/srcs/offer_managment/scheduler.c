@@ -30,62 +30,91 @@ void binary_resa_tree(t_resa *tree)
 
     
     binary_resa_tree(tree->left);
-    content = tree->content;
-    printf("resa id: %d --> : %s start: %ld end %ld\n",content->id, content->name, tree->interval[0], tree->interval[1]);
     binary_resa_tree(tree->right);
 
 }
 
-
-t_resa *ask_a_resa(t_offre *offre, time_t start, time_t end)
+long date_to_ms(int day, int mount, int year, int hour, int min)
 {
-    t_resa *resa;
 
-    resa = malloc(sizeof(t_resa));
-    if(!resa){perror("malloc resa"); return(NULL);}
-    resa->content = offre;
-    resa->interval[0] = start;
-    resa->interval[1] = end;
-    resa->left = NULL;
-    resa->right = NULL;
-    return(resa);
+    
+
 }
 
 
-int test_time(t_offre **list)
+void printf_date(time_t start, time_t end)
 {
-    time_t start, end;
-    t_resa *resa_tree;
-    struct tm  *t;
+    struct tm *date_s;
+    struct tm *date_e;
 
-    start = time(NULL);
-    t =  localtime(&start);
-    printf("millisecond since January 1, 1970: %ld\n", start);
-    printf("Nous somme le %d/%d/%d\n", t->tm_mday, t->tm_mon + 1, t->tm_year + 1900);
-    printf("Il est %dH%d\n",t->tm_hour, t->tm_min);
-    unsigned long dif = (unsigned long)difftime(end, start);
-    printf("voici la diff %ld \n", dif);
+    date_s = localtime(&start);
+    date_e = localtime(&end);
 
-    resa_tree = NULL;
+    printf("START ---> %d/%d/%d %d:%d:%d\n", date_s->tm_mday, date_s->tm_mon, 1900 + date_s->tm_year, date_s->tm_hour, date_s->tm_min,date_s->tm_sec);
+    printf("END -----> %d/%d/%d %d:%d:%d\n", date_e->tm_mday, date_e->tm_mon, 1900 + date_e->tm_year, date_e->tm_hour, date_e->tm_min,date_e->tm_sec);
+    printf("\n\n");
+}
 
-    t_resa *resa;
-    t_resa *resa1;
-    t_resa *resa2;
-    t_resa *resa3;
-    t_resa *resa4;
+int add_resa(t_resa *root, t_resa *resa)
+{
+    t_resa *tmp;
+
+    if(!root || !resa)
+        return(1);
+    if(!root->left)
+    {
+        root->left = resa;
+        return(0);
+    }
+    if(!root->right)
+    {
+        root->right = resa;
+        return(0);
+    }
+    else
+    {
+        tmp = root;
+        root = resa;
+        resa->left = tmp;
+        return(0);
+    }
+    return(1);
+}
+
+void display_resa(t_resa *root)
+{
+    if(!root)
+        return;
+    display_resa(root->left);
+
+    printf_date(root->start, root->end);
+
+    display_resa(root->right);
+}
+
+int create_resa(struct tm *date, int hour, int id, t_resa **resa_tree)
+{
+
+    t_resa *resa; 
+
+    if(!*resa_tree)
+        printf("l'arbre de reservation est NULL\n");
     
-    resa = ask_a_resa(*list, start, start + 1);
-    resa1 = ask_a_resa((*list)->next, start + 1000, start + 2000);
-    resa2 = ask_a_resa((*list)->next->next, start + 4000, start + 6000);
-    resa3 = ask_a_resa((*list)->next->next->next, start + 4000, start + 6000);
-    resa4 = ask_a_resa((*list)->next, start + 6000, start + 6000);
+    resa = malloc(sizeof(t_resa));
+    if(!resa){perror("malloc"); return(1);}
 
-    resa->left = resa1;
-    resa->right = resa2;
-
-    binary_resa_tree(resa);
-    printf("new start\n");
-    resa3->left = resa;
-    resa3->right = resa4;
-    binary_resa_tree(resa3);
+    resa->start = mktime(date);
+    resa->end = resa->start + 3600  ;
+    resa->offer_id = id;
+    resa->right = NULL;
+    resa->left = NULL;
+    
+    if(!*resa_tree)
+    {
+        *resa_tree = resa;
+        return(0);
+    }
+    
+    int r = add_resa(*resa_tree, resa);
+    return(r);
 }

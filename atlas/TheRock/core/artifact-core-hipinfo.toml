@@ -1,5 +1,0 @@
-# hipInfo
-[components.run."core/hipInfo/stage"]
-include = [
-  "bin/hipInfo*",
-]

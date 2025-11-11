@@ -111,11 +111,27 @@ CMakeFiles/electra.dir/srcs/offer_managment/scheduler.c.o: \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/syslimits.h \
  /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
- /usr/include/libxml/xmlstring.h /usr/include/libxml/xmlmemory.h \
- /usr/include/libxml/xmlregexp.h /usr/include/libxml/dict.h \
- /usr/include/libxml/hash.h /usr/include/libxml/valid.h \
- /usr/include/libxml/xmlerror.h /usr/include/libxml/list.h \
- /usr/include/libxml/xmlautomata.h /usr/include/libxml/entities.h \
- /usr/include/libxml/encoding.h /usr/include/libxml/xmlIO.h \
- /usr/include/libxml/SAX2.h /usr/include/libxml/threads.h \
+ /usr/include/libxml/xmlstring.h /usr/include/libxml/xmlregexp.h \
+ /usr/include/libxml/dict.h /usr/include/libxml/hash.h \
+ /usr/include/libxml/valid.h /usr/include/libxml/xmlerror.h \
+ /usr/include/libxml/list.h /usr/include/libxml/xmlautomata.h \
+ /usr/include/libxml/entities.h /usr/include/libxml/encoding.h \
+ /usr/include/iconv.h /usr/include/unicode/ucnv.h \
+ /usr/include/unicode/ucnv_err.h /usr/include/unicode/utypes.h \
+ /usr/include/unicode/umachine.h /usr/include/unicode/ptypes.h \
+ /usr/include/unicode/platform.h /usr/include/unicode/uconfig.h \
+ /usr/include/unicode/uvernum.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
+ /usr/include/x86_64-linux-gnu/bits/wchar.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+ /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
+ /usr/include/unicode/urename.h /usr/include/unicode/uversion.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/float.h \
+ /usr/include/unicode/utf.h /usr/include/unicode/utf8.h \
+ /usr/include/unicode/utf16.h /usr/include/unicode/utf_old.h \
+ /usr/include/unicode/uenum.h /usr/include/libxml/xmlIO.h \
+ /usr/include/libxml/globals.h /usr/include/libxml/SAX2.h \
+ /usr/include/libxml/xlink.h /usr/include/libxml/xmlmemory.h \
+ /usr/include/libxml/threads.h \
  /home/cc/gpu_lab/pleiades/electra/srcs/offer_managment/../../../merope/42/libft/libft.h

@@ -42,8 +42,9 @@ typedef struct s_offre
 typedef struct s_resa
 {
 
-    void            *content;
-    unsigned long   interval[2];
+    time_t          start;
+    time_t          end;
+    int             offer_id;
 
     struct s_resa *left;
     struct s_resa *right;
@@ -57,6 +58,6 @@ int test_time(t_offre **list);
 t_offre **get_offer_list(void);
 void    dislay_offer_list(t_offre **offre_list);
 int     clean_list_offer(t_offre **offres);
-
-
+int     create_resa(struct tm *date, int hour, int id, t_resa **resa_tree);
+void    display_resa(t_resa *root);
 #endif

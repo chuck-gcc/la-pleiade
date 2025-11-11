@@ -61,6 +61,7 @@ SRCS=	ft_putchar_fd.c \
 		ft_skip_space.c \
 		ft_isquote.c \
 		ft_nbr_of_word.c \
+		ft_day_in_mount.c \
 
 BONUS=	ft_lstnew_bonus.c \
 		ft_lstadd_front_bonus.c \
