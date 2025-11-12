@@ -9,9 +9,9 @@ void printf_date(time_t *start, time_t *end)
     struct tm *date_e;
 
     date_s = localtime(start);
-    date_e = localtime(end);
-
     printf("START ---> %d/%d/%d %d:%d:%d\n", date_s->tm_mday, date_s->tm_mon, 1900 + date_s->tm_year, date_s->tm_hour, date_s->tm_min,date_s->tm_sec);
+    
+    date_e = localtime(end);
     printf("END -----> %d/%d/%d %d:%d:%d\n", date_e->tm_mday, date_e->tm_mon, 1900 + date_e->tm_year, date_e->tm_hour, date_e->tm_min,date_e->tm_sec);
     printf("\n\n");
 }

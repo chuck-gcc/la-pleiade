@@ -38,7 +38,7 @@ char **read_line()
 }
 
 
-t_resa *iso_date_to_resa(const char *iso_date, const char id, const char time)
+t_resa *iso_date_to_resa(const char *iso_date, char *id, char *time)
 {
     char **split_time;
     char **split_date;
@@ -64,7 +64,9 @@ t_resa *iso_date_to_resa(const char *iso_date, const char id, const char time)
     resa = malloc(sizeof(t_resa));
     if(!resa){perror("malloc resa"); ft_split_clean(&split_hour);ft_split_clean(&split_date);ft_split_clean(&split_time); return(NULL);}
 
-    t.tm_year = atoi(split_date[0]);
+    //printf("voici %d-%d-%dT%d:%d:%d\n",atoi(split_date[0]),atoi(split_date[1]), atoi(split_date[2]),atoi(split_hour[0]),atoi(split_hour[1]),atoi(split_hour[2]));
+    
+    t.tm_year = atoi(split_date[0]) - 1900;
     t.tm_mon = atoi(split_date[1]);
     t.tm_mday = atoi(split_date[2]);
 
@@ -72,8 +74,12 @@ t_resa *iso_date_to_resa(const char *iso_date, const char id, const char time)
     t.tm_min = atoi(split_hour[1]);
     t.tm_sec = atoi(split_hour[2]);
     
-    resa->start = mktime(&t);
-
+    
+    resa->start = mktime(&t);   
+    resa->offer_id = ft_atoi(id);
+    resa->end =  resa->start + (3600 *  atoi(time));
+    
+    
     ft_split_clean(&split_hour);
     ft_split_clean(&split_date);
     ft_split_clean(&split_time);
@@ -87,7 +93,7 @@ int electra_vm_ochestrator()
     t_resa **resa_tree;
     t_resa *resa;
 
-    char *args[] = {"2025-21-31T20:00:00", "2", "1"};
+    char *args[] = {"2025-10-29T20:12:12", "1", "2"};
     resa_tree = malloc(sizeof(t_resa *));
     if(!resa_tree){perror("malloc"); return(1);}
 
@@ -102,8 +108,7 @@ int electra_vm_ochestrator()
     }
     else
     {
-        resa->offer_id = 1;
-        resa->end = resa->start + (time_t)ft_atoi(args[1]);
+        
         display_resa(resa);
     }
     free(resa_tree);
