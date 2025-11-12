@@ -15,26 +15,123 @@ struct tm date_obj(t_date date)
     return(t);
 }
 
-int main(void)
+
+char **read_line()
 {
-    t_offre **list;
+    int fd;
+    char **split;
+    char buffer[1024];
+
+    printf("add vm reservation ");
+    fflush(stdout);
+
+    fd = read(STDIN_FILENO, buffer, 1023);
+    if(fd == -1){perror("read");return(NULL);}
+    buffer[fd] = '\0';
+
+    split = ft_split(buffer, 32);
+    if(!split)
+    {
+        return(NULL);
+    }
+    return(split);
+}
+
+
+t_resa *iso_date_to_resa(const char *iso_date, const char id, const char time)
+{
+    char **split_time;
+    char **split_date;
+    char **split_hour;
+    char *date;
+    char *hour;
+    t_resa *resa;
+    struct tm t;
+
+    if(!iso_date)
+        return(NULL);
+    split_time = ft_split(iso_date, 'T');
+    if(!split_time)
+        return(NULL);
+    date = split_time[0];    
+    hour = split_time[1];
+    split_date = ft_split(date,'-');
+    if(!split_date){ft_split_clean(&split_time); return(NULL);}
+    split_hour = ft_split(hour,':');
+    if(!split_hour){ft_split_clean(&split_date);ft_split_clean(&split_time); return(NULL);}
+
+
+    resa = malloc(sizeof(t_resa));
+    if(!resa){perror("malloc resa"); ft_split_clean(&split_hour);ft_split_clean(&split_date);ft_split_clean(&split_time); return(NULL);}
+
+    t.tm_year = atoi(split_date[0]);
+    t.tm_mon = atoi(split_date[1]);
+    t.tm_mday = atoi(split_date[2]);
+
+    t.tm_hour = atoi(split_hour[0]);
+    t.tm_min = atoi(split_hour[1]);
+    t.tm_sec = atoi(split_hour[2]);
+    
+    resa->start = mktime(&t);
+
+    ft_split_clean(&split_hour);
+    ft_split_clean(&split_date);
+    ft_split_clean(&split_time);
+    return(resa);    
+}
+
+// iso 8601     AAAA-MM-JJTHH:MM:SS,ss-/+FF:ff
+
+int electra_vm_ochestrator()
+{
     t_resa **resa_tree;
-    list =  get_offer_list();
+    t_resa *resa;
 
-    
-    time_t now;
-    now = time(NULL);
-    struct tm *t = localtime(&now);
-    
-
+    char *args[] = {"2025-21-31T20:00:00", "2", "1"};
     resa_tree = malloc(sizeof(t_resa *));
     if(!resa_tree){perror("malloc"); return(1);}
 
-    *resa_tree = NULL;
-    create_resa(t, 2, 0,resa_tree);
-    
-    display_resa(*resa_tree);
-    free(list);
+    // transforme iso date to resa_stuct
+
+    resa = iso_date_to_resa(args[0], args[1], args[2]);
+    if(!resa)
+    {
+        printf("Error resa\n");
+        free(resa_tree);
+        return(1);
+    }
+    else
+    {
+        resa->offer_id = 1;
+        resa->end = resa->start + (time_t)ft_atoi(args[1]);
+        display_resa(resa);
+    }
     free(resa_tree);
+    return(0);
+
+}
+
+int main(void)
+{
+
+    electra_vm_ochestrator();
+    
+    // t_offre **list;
+    // list =  get_offer_list();
+
+    
+    // time_t now;
+    // now = time(NULL);
+    // struct tm *t = localtime(&now);
+    
+
+    
+
+    // *resa_tree = NULL;
+    // create_resa(t, 2, 0,resa_tree);
+    
+    // display_resa(*resa_tree);
+    // free(list);
+    // free(resa_tree);
     return(0);
 }
