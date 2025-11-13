@@ -58,6 +58,8 @@ int test_time(t_offre **list);
 t_offre **get_offer_list(void);
 void    dislay_offer_list(t_offre **offre_list);
 int     clean_list_offer(t_offre **offres);
-int     create_resa(struct tm *date, int hour, int id, t_resa **resa_tree);
+t_resa *iso_date_to_resa(const char *iso_date, char *id, char *time);
 void    display_resa(t_resa *root);
+int add_resa(t_resa *root, t_resa *resa);
+
 #endif

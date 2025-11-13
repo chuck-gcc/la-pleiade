@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.23)
 
 project("electra")
 
+
 file(GLOB SRCS srcs/*.c srcs/vm_managment/*.c srcs/offer_managment/*.c)
 add_executable(electra ${SRCS})
 
