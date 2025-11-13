@@ -1,0 +1,12 @@
+/home/cc/gpu_lab/pleiades/electra/build/CMakeFiles/test.dir
+/home/cc/gpu_lab/pleiades/electra/build/CMakeFiles/edit_cache.dir
+/home/cc/gpu_lab/pleiades/electra/build/CMakeFiles/rebuild_cache.dir
+/home/cc/gpu_lab/pleiades/electra/build/srcs/CMakeFiles/electra.dir
+/home/cc/gpu_lab/pleiades/electra/build/srcs/CMakeFiles/test.dir
+/home/cc/gpu_lab/pleiades/electra/build/srcs/CMakeFiles/edit_cache.dir
+/home/cc/gpu_lab/pleiades/electra/build/srcs/CMakeFiles/rebuild_cache.dir
+/home/cc/gpu_lab/pleiades/electra/build/test_unit/CMakeFiles/test_date.dir
+/home/cc/gpu_lab/pleiades/electra/build/test_unit/CMakeFiles/test_date2.dir
+/home/cc/gpu_lab/pleiades/electra/build/test_unit/CMakeFiles/test.dir
+/home/cc/gpu_lab/pleiades/electra/build/test_unit/CMakeFiles/edit_cache.dir
+/home/cc/gpu_lab/pleiades/electra/build/test_unit/CMakeFiles/rebuild_cache.dir
