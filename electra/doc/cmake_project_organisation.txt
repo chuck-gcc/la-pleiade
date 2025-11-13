@@ -1,0 +1,132 @@
+.
+├── autoinstall
+│   ├── meta-data
+│   └── user-data
+├── CMakeLists.txt                  # the main cmake file 
+├── create_vm.sh
+├── doc
+│   ├── cmake_helper.md
+│   ├── cmake_project_organisation.txt
+│   ├── libvirt-0.7.3-Application_Development_Guide-en-US.pdf
+│   └── Libvirt-test-API.pdf
+├── include
+│   └── electra
+│       ├── offer.h
+│       ├── test_unit.h
+│       └── vm.h
+├── srcs
+│   ├── capacity
+│   ├── CMakeLists.txt             # the source cmake file
+│   ├── deamon
+│   ├── main.c
+│   ├── offer_managment
+│   │   ├── offer.c
+│   │   ├── offers
+│   │   │   ├── 1_ia_start.xml
+│   │   │   ├── 2_ia_dev.xml
+│   │   │   ├── 3_ia_pro.xml
+│   │   │   ├── 4_ia_lab.xml
+│   │   │   └── 5_ia_max.xml
+│   │   ├── scheduler
+│   │   └── scheduler.c
+│   └── vm_managment
+│       ├── vm_domain.c
+│       ├── vm_host.c
+│       └── vm_xml.c
+├── test.sh
+├── test_unit
+│   ├── CMakeLists.txt             # the test_unit cmake file
+│   ├── test_date2.c
+│   └── test_date.c
+└── VM_catalog
+    ├── template_test.xml
+    ├── test2.xml
+    └── test.xml
+
+14 directories, 30 files
+
+
+
+
+#The main cmake file:
+
+// set the minimum_required version for the project
+cmake_minimum_required(VERSION 3.23)
+
+// the name of the project
+project(electra)
+
+// enable ctest module
+enable_testing()
+
+
+// define the include directories
+include_directories(${PROJECT_SOURCE_DIR}/include)
+
+
+// add our two subworking directories, here test and srcs
+add_subdirectory("srcs")
+
+add_subdirectory("test_unit")
+
+
+
+#The source cmake file:
+
+// define the target cible for compilation
+file(GLOB SRCS *.c vm_managment/*.c offer_managment/*.c)
+
+
+// define the executable to be build
+add_executable(electra ${SRCS})
+
+// define the compilation option
+target_compile_options(electra PRIVATE -Wall -Wextra -Werror)
+
+
+// set the librairie path variables
+set(LIBVIRT_LIBRARY /usr/lib/x86_64-linux-gnu/libvirt.so)
+set(LIBXML /usr/lib/x86_64-linux-gnu/libxml2.so.2)
+set(LIBFT /home/cc/gpu_lab/pleiades/merope/42/libft/libft.a)
+
+
+// set the header path variables
+set(VIRT /usr/include/libvirt)
+set(LIBXML_HEADER /usr/include/libxml)
+set(LIBFT_HEADER /home/cc/gpu_lab/pleiades/merope/42/libft/libft.h)
+
+// link the include
+target_include_directories(electra PRIVATE ${VIRT}${LIBXML_HEADER}${LIBFT_HEADER})
+
+//link the  header
+target_link_libraries(electra PRIVATE ${LIBVIRT_LIBRARY} ${LIBXML} ${LIBFT})
+
+
+# the test cmake file:
+
+// create our executable test
+add_executable(test_date test_date.c)
+add_executable(test_date2 test_date2.c)
+
+// include our include
+target_include_directories(test_date PRIVATE ${PROJECT_SOURCE_DIR}/include)
+target_include_directories(test_date2 PRIVATE ${PROJECT_SOURCE_DIR}/include)
+
+
+// create our test
+add_test(NAME DateTest COMMAND test_date)
+add_test(NAME DateTest2 COMMAND test_date2)
+
+
+//build the cmake
+cmake -B build
+
+//compile 
+cmake --build build
+
+//test
+cd build && ctest
+
+//run
+
+./build/srcs/electra

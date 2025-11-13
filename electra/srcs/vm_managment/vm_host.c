@@ -1,4 +1,4 @@
-#include "vm.h"
+#include "../include/electra/vm.h"
 
 virConnectPtr host_connection(void)
 {
@@ -19,10 +19,10 @@ void get_ressources(virConnectPtr co)
 {
     virNodeInfoPtr stat = NULL;
 
-    int i = 0;
     if(!co)
         return ;
     char *ressources = virConnectGetCapabilities(co);
+    (void)ressources;
     stat = malloc(sizeof(virNodeInfoPtr));
     if(!stat){perror("malloc stat"); return;}
     int y =  virNodeGetInfo(co, stat);

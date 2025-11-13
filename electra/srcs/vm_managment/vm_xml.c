@@ -1,4 +1,4 @@
-#include "vm.h"
+#include "../include/electra/vm.h"
 
 // put the xml file in string
 
@@ -8,7 +8,7 @@ char *get_xml(const char *path)
     char *xml;
     long len;
 
-    if((f = fopen(path, "r")) < 0)
+    if((f = fopen(path, "r")) == NULL)
     {
         perror("fopen");
         return(NULL);

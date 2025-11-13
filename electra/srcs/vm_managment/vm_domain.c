@@ -1,4 +1,4 @@
-#include "vm.h"
+#include "../include/electra/vm.h"
 
 int list_actif_domain(virConnect *conn)
 {
@@ -31,9 +31,7 @@ int list_actif_domain(virConnect *conn)
 
 int create_vm(virConnect *conn)
 {
-    int fd;
     virDomainPtr    new_vm;
-    long xml_len;
     char *xml;
 
     xml = get_xml("VM_catalog/template_test.xml");

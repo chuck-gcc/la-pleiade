@@ -1,4 +1,4 @@
-#include "offer.h"
+#include "../include/electra/offer.h"
 
 static char *create_offer_path(const char *str_1, const char *str_2 )
 {
@@ -30,27 +30,27 @@ static void get_config_data(t_offre *node, xmlNodePtr root, int i)
 		if(n->type == XML_ELEMENT_NODE)
 		{
 			
-			len = ft_strlen(n->name);
+			len = ft_strlen((char *)n->name);
 			//printf("%s ", n->name);
 			// xmlNodeGetContent need to be free?
-			if(!strncmp(n->name, "gpu_id", ft_strlen("gpu_id")))
+			if(!strncmp((char *)n->name, "gpu_id", ft_strlen("gpu_id")))
 			{
 				if(i < GPU_MAX)
 				{
-					node->gpu[i] = atoi(xmlNodeGetContent(n));
+					node->gpu[i] = atoi((char *)xmlNodeGetContent(n));
 					i+=1;
 				}
 			}
-			else if(!strncmp(n->name, "id", len))
-				node->id = atoi(xmlNodeGetContent(n));
-			else if (!strncmp(n->name, "cpu", len))
-				node->cpu= atoi(xmlNodeGetContent(n));
-			else if (!strncmp(n->name, "vram", len))
-				node->vram= atoi(xmlNodeGetContent(n));
-			else if (!strncmp(n->name, "ram", len))
-				node->ram= atol(xmlNodeGetContent(n));
-			else if (!strncmp(n->name, "storage", len))
-				node->storage= atoi(xmlNodeGetContent(n));
+			else if(!strncmp((char *)n->name, "id", len))
+				node->id = atoi((char *)xmlNodeGetContent(n));
+			else if (!strncmp((char *)n->name, "cpu", len))
+				node->cpu= atoi((char *)xmlNodeGetContent(n));
+			else if (!strncmp((char *)n->name, "vram", len))
+				node->vram= atoi((char *)xmlNodeGetContent(n));
+			else if (!strncmp((char *)n->name, "ram", len))
+				node->ram= atol((char *)xmlNodeGetContent(n));
+			else if (!strncmp((char *)n->name, "storage", len))
+				node->storage= atoi((char *)xmlNodeGetContent(n));
 
 		}
 		if(n->children)
@@ -185,7 +185,6 @@ int clean_list_offer(t_offre **offres)
 
 t_offre **get_offer_list(void)
 {
-	FILE            *f;
 	DIR             *dir;
 	struct dirent   *dir_node;
 	t_offre         **offers_list;

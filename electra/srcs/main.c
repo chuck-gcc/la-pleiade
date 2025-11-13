@@ -1,7 +1,5 @@
-#include "vm_managment/vm.h"
-#include "offer_managment/offer.h"
-
-
+#include "../include/electra/vm.h"
+#include "../include/electra/offer.h"
 
 
 char **read_line()
@@ -66,6 +64,6 @@ int main(void)
 
     electra_vm_ochestrator();
     
-    
+
     return(0);
 }
