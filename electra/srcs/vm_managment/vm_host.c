@@ -1,4 +1,4 @@
-#include "../include/electra/vm.h"
+#include "../../include/electra/vm.h"
 
 virConnectPtr host_connection(void)
 {

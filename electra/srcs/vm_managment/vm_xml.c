@@ -1,4 +1,4 @@
-#include "../include/electra/vm.h"
+#include "../../include/electra/vm.h"
 
 // put the xml file in string
 

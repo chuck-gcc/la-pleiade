@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void	ft_print_bit_16(int n)
+void	ft_print_bit_32(int n)
 {
 	int		bit;
 	char	c;

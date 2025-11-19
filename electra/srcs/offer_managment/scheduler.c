@@ -40,8 +40,8 @@ void printf_date(time_t *start, time_t *end)
     date_s = *localtime(start);
     date_e = *localtime(end);
     
-    printf("START ---> %d/%d/%d %d:%d:%d\n", date_s.tm_mday, date_s.tm_mon, 1900 + date_s.tm_year, date_s.tm_hour, date_s.tm_min,date_s.tm_sec);
-    printf("END -----> %d/%d/%d %d:%d:%d\n", date_e.tm_mday, date_e.tm_mon, 1900 + date_e.tm_year, date_e.tm_hour, date_e.tm_min,date_e.tm_sec);
+    printf("START ---> %d/%d/%d %d:%d:%d\n", date_s.tm_mday, date_s.tm_mon + 1, 1900 + date_s.tm_year, date_s.tm_hour, date_s.tm_min,date_s.tm_sec);
+    printf("END -----> %d/%d/%d %d:%d:%d\n", date_e.tm_mday, date_e.tm_mon + 1, 1900 + date_e.tm_year, date_e.tm_hour, date_e.tm_min,date_e.tm_sec);
     printf("\n\n");
 }
 
@@ -87,7 +87,7 @@ t_resa *iso_date_to_resa(const char *iso_date, char *id, char *time)
     ft_bzero(&t,sizeof(struct tm));
     
     t.tm_year = atoi(split_date[0]) - 1900;
-    t.tm_mon = atoi(split_date[1]);
+    t.tm_mon = atoi(split_date[1]) - 1;
     t.tm_mday = atoi(split_date[2]);
 
     t.tm_hour = atoi(split_hour[0]);
