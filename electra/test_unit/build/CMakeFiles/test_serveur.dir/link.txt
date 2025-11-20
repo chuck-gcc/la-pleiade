@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/test_serveur.dir/test_serveur.c.o CMakeFiles/test_serveur.dir/home/cc/gpu_lab/pleiades/electra/get_next_line/get_next_line_bonus.c.o CMakeFiles/test_serveur.dir/home/cc/gpu_lab/pleiades/electra/get_next_line/get_next_line_utils_bonus.c.o -o test_serveur  /home/cc/gpu_lab/pleiades/merope/42/libft/libft.a 

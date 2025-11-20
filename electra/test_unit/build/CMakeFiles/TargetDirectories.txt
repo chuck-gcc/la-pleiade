@@ -1,4 +1,5 @@
 /home/cc/gpu_lab/pleiades/electra/test_unit/build/CMakeFiles/test_date.dir
 /home/cc/gpu_lab/pleiades/electra/test_unit/build/CMakeFiles/test_date2.dir
+/home/cc/gpu_lab/pleiades/electra/test_unit/build/CMakeFiles/test_serveur.dir
 /home/cc/gpu_lab/pleiades/electra/test_unit/build/CMakeFiles/edit_cache.dir
 /home/cc/gpu_lab/pleiades/electra/test_unit/build/CMakeFiles/rebuild_cache.dir

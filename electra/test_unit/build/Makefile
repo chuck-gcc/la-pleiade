@@ -142,6 +142,67 @@ test_date2/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_date2.dir/build.make CMakeFiles/test_date2.dir/build
 .PHONY : test_date2/fast
 
+#=============================================================================
+# Target rules for targets named test_serveur
+
+# Build rule for target.
+test_serveur: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_serveur
+.PHONY : test_serveur
+
+# fast build rule for target.
+test_serveur/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_serveur.dir/build.make CMakeFiles/test_serveur.dir/build
+.PHONY : test_serveur/fast
+
+home/cc/gpu_lab/pleiades/electra/get_next_line/get_next_line_bonus.o: home/cc/gpu_lab/pleiades/electra/get_next_line/get_next_line_bonus.c.o
+.PHONY : home/cc/gpu_lab/pleiades/electra/get_next_line/get_next_line_bonus.o
+
+# target to build an object file
+home/cc/gpu_lab/pleiades/electra/get_next_line/get_next_line_bonus.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_serveur.dir/build.make CMakeFiles/test_serveur.dir/home/cc/gpu_lab/pleiades/electra/get_next_line/get_next_line_bonus.c.o
+.PHONY : home/cc/gpu_lab/pleiades/electra/get_next_line/get_next_line_bonus.c.o
+
+home/cc/gpu_lab/pleiades/electra/get_next_line/get_next_line_bonus.i: home/cc/gpu_lab/pleiades/electra/get_next_line/get_next_line_bonus.c.i
+.PHONY : home/cc/gpu_lab/pleiades/electra/get_next_line/get_next_line_bonus.i
+
+# target to preprocess a source file
+home/cc/gpu_lab/pleiades/electra/get_next_line/get_next_line_bonus.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_serveur.dir/build.make CMakeFiles/test_serveur.dir/home/cc/gpu_lab/pleiades/electra/get_next_line/get_next_line_bonus.c.i
+.PHONY : home/cc/gpu_lab/pleiades/electra/get_next_line/get_next_line_bonus.c.i
+
+home/cc/gpu_lab/pleiades/electra/get_next_line/get_next_line_bonus.s: home/cc/gpu_lab/pleiades/electra/get_next_line/get_next_line_bonus.c.s
+.PHONY : home/cc/gpu_lab/pleiades/electra/get_next_line/get_next_line_bonus.s
+
+# target to generate assembly for a file
+home/cc/gpu_lab/pleiades/electra/get_next_line/get_next_line_bonus.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_serveur.dir/build.make CMakeFiles/test_serveur.dir/home/cc/gpu_lab/pleiades/electra/get_next_line/get_next_line_bonus.c.s
+.PHONY : home/cc/gpu_lab/pleiades/electra/get_next_line/get_next_line_bonus.c.s
+
+home/cc/gpu_lab/pleiades/electra/get_next_line/get_next_line_utils_bonus.o: home/cc/gpu_lab/pleiades/electra/get_next_line/get_next_line_utils_bonus.c.o
+.PHONY : home/cc/gpu_lab/pleiades/electra/get_next_line/get_next_line_utils_bonus.o
+
+# target to build an object file
+home/cc/gpu_lab/pleiades/electra/get_next_line/get_next_line_utils_bonus.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_serveur.dir/build.make CMakeFiles/test_serveur.dir/home/cc/gpu_lab/pleiades/electra/get_next_line/get_next_line_utils_bonus.c.o
+.PHONY : home/cc/gpu_lab/pleiades/electra/get_next_line/get_next_line_utils_bonus.c.o
+
+home/cc/gpu_lab/pleiades/electra/get_next_line/get_next_line_utils_bonus.i: home/cc/gpu_lab/pleiades/electra/get_next_line/get_next_line_utils_bonus.c.i
+.PHONY : home/cc/gpu_lab/pleiades/electra/get_next_line/get_next_line_utils_bonus.i
+
+# target to preprocess a source file
+home/cc/gpu_lab/pleiades/electra/get_next_line/get_next_line_utils_bonus.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_serveur.dir/build.make CMakeFiles/test_serveur.dir/home/cc/gpu_lab/pleiades/electra/get_next_line/get_next_line_utils_bonus.c.i
+.PHONY : home/cc/gpu_lab/pleiades/electra/get_next_line/get_next_line_utils_bonus.c.i
+
+home/cc/gpu_lab/pleiades/electra/get_next_line/get_next_line_utils_bonus.s: home/cc/gpu_lab/pleiades/electra/get_next_line/get_next_line_utils_bonus.c.s
+.PHONY : home/cc/gpu_lab/pleiades/electra/get_next_line/get_next_line_utils_bonus.s
+
+# target to generate assembly for a file
+home/cc/gpu_lab/pleiades/electra/get_next_line/get_next_line_utils_bonus.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_serveur.dir/build.make CMakeFiles/test_serveur.dir/home/cc/gpu_lab/pleiades/electra/get_next_line/get_next_line_utils_bonus.c.s
+.PHONY : home/cc/gpu_lab/pleiades/electra/get_next_line/get_next_line_utils_bonus.c.s
+
 home/cc/gpu_lab/pleiades/electra/srcs/offer_managment/offer.o: home/cc/gpu_lab/pleiades/electra/srcs/offer_managment/offer.c.o
 .PHONY : home/cc/gpu_lab/pleiades/electra/srcs/offer_managment/offer.o
 
@@ -325,6 +386,30 @@ test_date2.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_date2.dir/build.make CMakeFiles/test_date2.dir/test_date2.c.s
 .PHONY : test_date2.c.s
 
+test_serveur.o: test_serveur.c.o
+.PHONY : test_serveur.o
+
+# target to build an object file
+test_serveur.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_serveur.dir/build.make CMakeFiles/test_serveur.dir/test_serveur.c.o
+.PHONY : test_serveur.c.o
+
+test_serveur.i: test_serveur.c.i
+.PHONY : test_serveur.i
+
+# target to preprocess a source file
+test_serveur.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_serveur.dir/build.make CMakeFiles/test_serveur.dir/test_serveur.c.i
+.PHONY : test_serveur.c.i
+
+test_serveur.s: test_serveur.c.s
+.PHONY : test_serveur.s
+
+# target to generate assembly for a file
+test_serveur.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_serveur.dir/build.make CMakeFiles/test_serveur.dir/test_serveur.c.s
+.PHONY : test_serveur.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -335,6 +420,13 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test_date"
 	@echo "... test_date2"
+	@echo "... test_serveur"
+	@echo "... home/cc/gpu_lab/pleiades/electra/get_next_line/get_next_line_bonus.o"
+	@echo "... home/cc/gpu_lab/pleiades/electra/get_next_line/get_next_line_bonus.i"
+	@echo "... home/cc/gpu_lab/pleiades/electra/get_next_line/get_next_line_bonus.s"
+	@echo "... home/cc/gpu_lab/pleiades/electra/get_next_line/get_next_line_utils_bonus.o"
+	@echo "... home/cc/gpu_lab/pleiades/electra/get_next_line/get_next_line_utils_bonus.i"
+	@echo "... home/cc/gpu_lab/pleiades/electra/get_next_line/get_next_line_utils_bonus.s"
 	@echo "... home/cc/gpu_lab/pleiades/electra/srcs/offer_managment/offer.o"
 	@echo "... home/cc/gpu_lab/pleiades/electra/srcs/offer_managment/offer.i"
 	@echo "... home/cc/gpu_lab/pleiades/electra/srcs/offer_managment/offer.s"
@@ -356,6 +448,9 @@ help:
 	@echo "... test_date2.o"
 	@echo "... test_date2.i"
 	@echo "... test_date2.s"
+	@echo "... test_serveur.o"
+	@echo "... test_serveur.i"
+	@echo "... test_serveur.s"
 .PHONY : help
 
 

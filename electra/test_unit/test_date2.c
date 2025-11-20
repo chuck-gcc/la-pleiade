@@ -1,4 +1,3 @@
-#include "../include/electra/test_unit.h"
 
 #include <stdio.h>
 #include <unistd.h>

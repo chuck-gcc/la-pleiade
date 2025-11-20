@@ -46,4 +46,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/test_date.dir/DependInfo.cmake"
   "CMakeFiles/test_date2.dir/DependInfo.cmake"
+  "CMakeFiles/test_serveur.dir/DependInfo.cmake"
   )
